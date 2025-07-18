@@ -204,18 +204,40 @@ sequenceDiagram
 </div>
 ---
 
-## ⚠️ Advertencia
+---
+layout: default  # Uses your _layouts/default.html
+title: Ejemplo de Componentes
+permalink: /ejemplo-componentes/
+---
 
-<div class="bloque advertencia">
-⚠️ Recuerda que los modelos pueden generar contenido aparentemente válido pero sin fundamento real. Verifica la información en fuentes confiables.
+# Demostración de Componentes Estilizados
+
+## 🧩 Definición Temática
+
+<div class="definicion">
+**Término:** Canonical Structure  
+**Definición:** Organización de archivos SCSS según las mejores prácticas de Jekyll, separando variables, mixins y componentes en archivos parciales.
 </div>
 
 ---
 
-## 💡 Ejemplo de bloque temático visual
+## ⚠️ Advertencia Importante
 
-<div class="bloque ejemplo">
-💡 Ejemplo: Si el prompt es ambiguo como "¿Qué novelas escribió Aristóteles?", el modelo puede "alucinar" datos inventados que suenen coherentes pero no sean reales.
+<div class="advertencia">
+**¡Atención!**  
+No modificar directamente los archivos CSS generados. Siempre editar los archivos SCSS en `_sass/` y dejar que Jekyll los compile.
+</div>
+
+---
+
+## 💡 Ejemplo Práctico
+
+<div class="ejemplo">
+**Caso de Uso:**  
+```html
+<!-- En tu archivo .md -->
+<div class="advertencia">
+  Este contenido aparecerá con fondo rojo claro.
 </div>
 
 ---
@@ -226,7 +248,3 @@ sequenceDiagram
 - Genera un diagrama Mermaid que represente cómo una IA decide un output basado en contexto limitado.
 - Identifica el token al que se le asignaría mayor probabilidad en una frase como "La ética de la IA requiere..."
 
----
-```text
-¿Te gustaría que este tipo de actividades se generen automáticamente como plantilla con navegación entre actividades? También puedo ayudarte a convertir este ejemplo en una presentación o mini-cuestionario interactivo con retroalimentación dinámica 📘✨
-```
