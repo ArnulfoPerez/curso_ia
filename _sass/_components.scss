@@ -1,0 +1,18 @@
+.nav {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-top: $spacing-unit * 0.5;
+    display: flex;
+    gap: $spacing-unit * 1.5;
+  }
+
+  &__link {
+    color: $nav-link-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
