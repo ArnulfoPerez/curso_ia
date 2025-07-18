@@ -3,4 +3,11 @@ description: Repositorio del curso Introducción a la IA
 theme: jekyll-theme-minimal
 url: "https://ArnulfoPerez.github.io/curso_ia"
 baseurl: "" # Leave empty unless your site is in a subdirectory
-markdown: GFM
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+  math_engine: mathjax
