@@ -19,3 +19,11 @@ navigation:
     url: "/instructor"      # Enlaza a tu página instructor.md
   - title: "Temario"
     url: "/temario"    # Enlaza a temario.md
+
+# Instructor info
+instructor:
+  name: "Dr. Arnulfo Pérez"
+  email: "arnulfo.perez@zintegra.com"
+  linkedin: "https://www.linkedin.com/in/arnulfoperez/"
+  position: "Consultor" # o el cargo que corresponda
+  institution: "Zintegra" # o la institución
