@@ -233,11 +233,7 @@ No modificar directamente los archivos CSS generados. Siempre editar los archivo
 ## 💡 Ejemplo Práctico
 
 <div class="ejemplo">
-**Caso de Uso:**  
-
-<!-- En tu archivo .md -->
-<div class="advertencia">
-  Este contenido aparecerá con fondo rojo claro.
+**Caso de Uso:** Este contenido aparecerá con fondo rojo claro.
 </div>
 
 ---
