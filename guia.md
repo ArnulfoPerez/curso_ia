@@ -234,7 +234,7 @@ No modificar directamente los archivos CSS generados. Siempre editar los archivo
 
 <div class="ejemplo">
 **Caso de Uso:**  
-```html
+
 <!-- En tu archivo .md -->
 <div class="advertencia">
   Este contenido aparecerá con fondo rojo claro.
