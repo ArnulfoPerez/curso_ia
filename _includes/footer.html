@@ -1,3 +1,10 @@
-<footer>
-    <p>© 2025 Arnulfo Pérez Pérez</p>
+<footer class="site-footer">
+  <div class="instructor-contact">
+    <h3>Contacto del instructor:</h3>
+    <p>{{ site.instructor.name }} - {{ site.instructor.position }}</p>
+    <a href="mailto:{{ site.instructor.email }}">{{ site.instructor.email }}</a>
+  </div>
+    <div class="wrapper">
+      <p>© {{ 'now' | date: "%Y" }} {{ site.title }}. Todos los derechos reservados.</p>
+    </div>
 </footer>
