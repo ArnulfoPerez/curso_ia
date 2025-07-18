@@ -26,7 +26,7 @@ La ecuación de probabilidad condicional en modelos de lenguaje es:
 
 $$ P(w_t \mid w_1, w_2, \ldots, w_{t-1}) $$
 
-Donde \(w_t\) es el token actual, y \(w_{t-1}\) los anteriores en la secuencia.
+Donde $w_t$ es el token actual, y $w_{t-1}$ los anteriores en la secuencia.
 
 ---
 
