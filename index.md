@@ -7,5 +7,5 @@ title: Inicio
 
 Explora actividades, temas y reflexiones sobre inteligencia artificial y sociedad.
 
-➡️ [Guía general]({% link guia.md %})  
+➡️ [Guía general]({% link guia %})  
 ➡️ [Ver actividad 1](actividades/actividad_s01)
