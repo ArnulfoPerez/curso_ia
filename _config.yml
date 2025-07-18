@@ -2,7 +2,7 @@ title: Introducción al impacto social de la Inteligencia Artificial
 description: Repositorio del curso Introducción a la IA
 theme: jekyll-theme-minimal
 url: "https://ArnulfoPerez.github.io/curso_ia"
-baseurl: "" # Leave empty unless your site is in a subdirectory
+baseurl: "curso_ia" # Leave empty unless your site is in a subdirectory
 markdown: kramdown
 highlighter: rouge
 kramdown:
@@ -11,3 +11,11 @@ kramdown:
     block:
       line_numbers: false
   math_engine: mathjax
+
+navigation:
+  - title: "Inicio"    # Texto que aparecerá en el menú
+    url: "/"           # Enlace a la página principal
+  - title: "Instructor"
+    url: "/instructor"      # Enlaza a tu página instructor.md
+  - title: "Temario"
+    url: "/temario"    # Enlaza a temario.md
