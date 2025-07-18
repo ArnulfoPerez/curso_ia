@@ -28,6 +28,15 @@ $$ P(w_t \mid w_1, w_2, \ldots, w_{t-1}) $$
 
 Donde $w_t$ es el token actual, y $w_{t-1}$ los anteriores en la secuencia.
 
+## Fórmulas matemáticas en línea
+
+La famosa ecuación de Einstein es $E = mc^2$.
+
+El teorema de Pitágoras establece que en un triángulo rectángulo: 
+\( a^2 + b^2 = c^2 \).
+
+La derivada de \( x^n \) es \( nx^{n-1} \).
+
 ---
 
 ## 🐍 Bloque de código en Python
