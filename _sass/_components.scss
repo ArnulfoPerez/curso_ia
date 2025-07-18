@@ -16,3 +16,32 @@
     }
   }
 }
+
+// _sass/_components.scss
+
+/* 🧩 Definición temática */
+.definicion {
+  border: 1px solid #00cc66;
+  background-color: #e8ffe5;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* ⚠️ Advertencia visual */
+.advertencia {
+  border: 1px solid #ff4d4d;
+  background-color: #ffe5e5;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* 💡 Ejemplo destacado */
+.ejemplo {
+  border: 1px solid #ffa500;
+  background-color: #fff8e5;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
