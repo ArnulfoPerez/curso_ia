@@ -46,14 +46,37 @@ print(generar_token("La IA puede"))
 
 ## 📊 Diagrama Mermaid
 
-```mermaid
+<div class="mermaid">
 flowchart TD
   Inicio["Inicio del modelo"] --> Token1["Token 1"]
   Token1 --> Token2["Token 2"]
   Token2 --> Decision["Decisión final"]
   Decision --> Resultado["Resultado generado"]
-```
+</div>
+# Diagrama de ejemplo con Mermaid
 
+Aquí hay un diagrama de flujo generado con Mermaid:
+
+<div class="mermaid">
+graph TD;
+    A[Inicio] --> B{Es un día soleado?};
+    B -->|Sí| C[Ve a la playa];
+    B -->|No| D[Quedate en casa];
+    C --> E[Termina];
+    D --> E;
+</div>
+
+Y aquí un diagrama de secuencia:
+
+<div class="mermaid">
+sequenceDiagram
+    participant Usuario
+    participant Sitio
+    Usuario->>Sitio: Carga la página
+    Sitio-->>Usuario: Muestra contenido
+    Usuario->>Sitio: Hace clic en botón
+    Sitio-->>Usuario: Muestra modal
+</div>
 ---
 
 ## ⚠️ Advertencia
