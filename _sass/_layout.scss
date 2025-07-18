@@ -1,0 +1,28 @@
+header {
+  background: $header-bg;
+  color: $header-text;
+  padding: $spacing-unit ($spacing-unit * 2);
+
+  h1 {
+    margin: 0;
+    font-size: 1.8em;
+  }
+}
+
+main {
+  padding: $spacing-unit * 2;
+  max-width: $content-max-width;
+  margin: auto;
+  background: #fff;
+}
+
+section {
+  margin-bottom: $spacing-unit * 2;
+}
+
+footer {
+  text-align: center;
+  padding: $spacing-unit;
+  background: $footer-bg;
+  font-size: 0.9em;
+}
