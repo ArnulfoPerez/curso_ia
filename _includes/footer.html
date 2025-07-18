@@ -1,25 +1,3 @@
-<footer class="site-footer">
-  <div class="wrapper">
-    <div class="instructor-contact">
-      <h3>Contacto del instructor:</h3>
-      <p>
-        <a href="{{ site.instructor.linkedin }}" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           aria-label="Perfil de LinkedIn del instructor">
-          {{ site.instructor.name }}
-        </a>
-      </p>
-      <p>
-        <a href="mailto:{{ site.instructor.email }}" 
-           aria-label="Enviar correo al instructor">
-          {{ site.instructor.email }}
-        </a>
-      </p>
-    </div>
-    
-    <div class="copyright">
+<footer >
       <p>© {{ 'now' | date: "%Y" }} {{ site.title }}. Todos los derechos reservados.</p>
-    </div>
-  </div>
 </footer>
