@@ -7,5 +7,5 @@ title: Inicio
 
 Explora actividades, temas y reflexiones sobre inteligencia artificial y sociedad.
 
-➡️ [Guía general](https://arnulfoperez.io/curso_ia/guia.html)  
+➡️ [Guía general]({% link guia %}))  
 ➡️ [Ver actividad 1](actividades/actividad_s01)
