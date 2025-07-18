@@ -31,12 +31,11 @@ Donde $w_t$ es el token actual, y $w_{t-1}$ los anteriores en la secuencia.
 ## Fórmulas matemáticas en línea
 
 La famosa ecuación de Einstein es $E = mc^2$.
-La ecuación es \\( E = mc^2 \\).
 
 El teorema de Pitágoras establece que en un triángulo rectángulo: 
-\( a^2 + b^2 = c^2 \).
+\\( a^2 + b^2 = c^2 \\).
 
-La derivada de \( x^n \) es \( nx^{n-1} \).
+La derivada de \\( x^n \\) es \\( nx^{n-1} \\).
 
 ---
 
