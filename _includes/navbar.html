@@ -1,8 +1,12 @@
-<nav>
-  <ul>
-    <li><a href="https://arnulfoperez.github.io/curso_ia/">Inicio</a></li>
-    <li><a href="https://arnulfoperez.github.io/curso_ia/Sesiones/">Notas</a></li>
-    <li><a href="https://arnulfoperez.github.io/curso_ia/Actividades/">Actividades</a></li>
-    <li><a href="https://arnulfoperez.github.io/curso_ia/Recursos/glosario">Glosario</a></li>
-  </ul>
+<nav class="nav">
+      <ul class="nav__list">
+    {% for item in site.navigation %}
+      <li>
+        <a href="{{ item.url | relative_url }}" 
+           {% if page.url == item.url %}class="active"{% endif %}>
+          {{ item.title }}
+        </a>
+      </li>
+    {% endfor %}
+      </ul>
 </nav>
