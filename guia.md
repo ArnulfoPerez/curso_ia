@@ -134,6 +134,14 @@ Los participantes recibirán una **constancia digital de participación** emitid
 La inteligencia artificial (IA) es la capacidad de una máquina para imitar funciones cognitivas humanas como el aprendizaje, la percepción y la toma de decisiones.
 </div>
 
+<div class="bloque advertencia">
+Los agentes inteligentes basados en Deep Learning pueden producir alucinaciones.
+</div>
+
+<div class="bloque ejemplo">
+LLMs estan basados de Deep Learning.
+</div>
+
 ---
 
 ## 🧮 Ejemplo con MathJax
