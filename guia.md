@@ -233,6 +233,10 @@ Puedes usar _cursivas_, `código`, y [enlaces](https://ejemplo.com)
 No modificar directamente los archivos CSS generados. Siempre editar los archivos SCSS en `_sass/` y dejar que Jekyll los compile.
 </div>
 
+{% include advertencia.html content="
+⚠️ Advertencia Importante
+" %}
+
 ---
 
 ## 💡 Ejemplo Práctico
@@ -241,6 +245,9 @@ No modificar directamente los archivos CSS generados. Siempre editar los archivo
 **Caso de Uso:** Este contenido aparecerá con fondo rojo claro.
 </div>
 
+{% include ejemplo.html content="
+💡 Ejemplo Práctico
+" %}
 ---
 
 ## 📌 Tarea sugerida
