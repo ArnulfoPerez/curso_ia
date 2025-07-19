@@ -3,13 +3,13 @@ layout: default
 title: Guía general del curso
 ---
 
-# Curso de Extensión Universitaria 
+# {{ site.title }} 
 ## (Modalidad Remota vía Zoom Corporativo)
 
 
 ## 1. Descripción general del curso
 
-"Inteligencia Artificial y Sociedad: Comprensión Crítica, Riesgos y Futuro" es un curso remoto, intensivo y participativo diseñado para introducir al público general en la comprensión conceptual, social y estratégica de la inteligencia artificial (IA). Está estructurado en **4 bloques temáticos**, cada uno compuesto por **2 sesiones de una hora**, para un total de **8 horas sincrónicas por Zoom Corporativo**.
+"{{ site.title }}" es un curso remoto, intensivo y participativo diseñado para introducir al público general en la comprensión conceptual, social y estratégica de la inteligencia artificial (IA). Está estructurado en **4 bloques temáticos**, cada uno compuesto por **2 sesiones de una hora**, para un total de **8 horas sincrónicas por Zoom Corporativo**.
 
 A lo largo de las sesiones, se desmitificará la IA, contextualizándola histórica y socialmente, y se explorarán sus impactos éticos, laborales, ambientales y culturales. El enfoque es interdisciplinario y está centrado en el pensamiento crítico, la deliberación ética y la anticipación de escenarios futuros.
 
@@ -203,56 +203,4 @@ sequenceDiagram
     Sitio-->>Usuario: Muestra modal
 </div>
 ---
-
----
-layout: default  # Uses your _layouts/default.html
-title: Ejemplo de Componentes
-permalink: /ejemplo-componentes/
----
-
-# Demostración de Componentes Estilizados
-
-## 🧩 Definición Temática
-
-<div class="definicion">
-**Término:** Canonical Structure  
-**Definición:** Organización de archivos SCSS según las mejores prácticas de Jekyll, separando variables, mixins y componentes en archivos parciales.
-</div>
-
-{% include definicion.html content="
-**Markdown funciona aquí**:  
-Puedes usar _cursivas_, `código`, y [enlaces](https://ejemplo.com)
-" %}
-
----
-
-## ⚠️ Advertencia Importante
-
-<div class="advertencia">
-**¡Atención!**  
-No modificar directamente los archivos CSS generados. Siempre editar los archivos SCSS en `_sass/` y dejar que Jekyll los compile.
-</div>
-
-{% include advertencia.html content="
-⚠️ Advertencia Importante
-" %}
-
----
-
-## 💡 Ejemplo Práctico
-
-<div class="ejemplo">
-**Caso de Uso:** Este contenido aparecerá con fondo rojo claro.
-</div>
-
-{% include ejemplo.html content="
-💡 Ejemplo Práctico
-" %}
----
-
-## 📌 Tarea sugerida
-
-- Escribe un prompt que provoque una respuesta alucinada por parte de un modelo generativo.
-- Genera un diagrama Mermaid que represente cómo una IA decide un output basado en contexto limitado.
-- Identifica el token al que se le asignaría mayor probabilidad en una frase como "La ética de la IA requiere..."
 
