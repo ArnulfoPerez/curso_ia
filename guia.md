@@ -219,6 +219,11 @@ permalink: /ejemplo-componentes/
 **Definición:** Organización de archivos SCSS según las mejores prácticas de Jekyll, separando variables, mixins y componentes en archivos parciales.
 </div>
 
+{% include definicion.html content="
+**Markdown funciona aquí**:  
+Puedes usar _cursivas_, `código`, y [enlaces](https://ejemplo.com)
+" %}
+
 ---
 
 ## ⚠️ Advertencia Importante
