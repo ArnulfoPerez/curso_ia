@@ -6,10 +6,8 @@ Al finalizar el curso, serás capaz de:
 4. **Evaluar** el impacto social, laboral, ético y ambiental de la IA.
 5. **Participar** informadamente en debates y decisiones sobre el uso y la regulación de la IA.
 <ol>
-{% for item in site.Objectives %}
-      <li>
-        {{ item.descripcion }}
-      </li>
+{% for obj in site.course.objectives %}
+  <li>{{ obj }}</li>
 {% endfor %}
 </ol>
 
