@@ -31,7 +31,7 @@ La IA ya no es solo una herramienta tecnológica; es un fenómeno sociocultural 
 - **Pensamiento Crítico**: El curso fomenta la capacidad de discernir entre la retórica y la realidad de la IA, permitiendo a los individuos evaluar las afirmaciones sobre esta tecnología de manera más sofisticada y evitar tanto el optimismo ingenuo como el catastrofismo infundado.
 - **Responsabilidad Ética**: Al entender los dilemas éticos asociados con la IA (ej. sesgos, autonomía, toma de decisiones), los ciudadanos pueden exigir transparencia y responsabilidad a los desarrolladores y usuarios de IA, contribuyendo a un futuro más justo.
 
-## **[Objetivos de Aprendizaje](./objetivos_de_aprendizaje.html)**
+## **[Objetivos de Aprendizaje](./objetivos.html)**
 
 Al finalizar el curso, serás capaz de:
 
