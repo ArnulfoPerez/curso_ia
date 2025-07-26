@@ -1,9 +1,7 @@
 title: Introducción al impacto social de la Inteligencia Artificial
 description: Repositorio del curso Introducción a la IA
 theme: jekyll-theme-minimal
-#remote_theme: pages-themes/cayman@v0.2.0
-#plugins:
-#- jekyll-remote-theme # add this line to the plugins list if you already have one
+
 url: "https://ArnulfoPerez.github.io/curso_ia"
 baseurl: "curso_ia" # Leave empty unless your site is in a subdirectory
 markdown: kramdown
@@ -30,3 +28,12 @@ instructor:
   linkedin: "https://www.linkedin.com/in/arnulfoperez/"
   position: "Consultor" # o el cargo que corresponda
   institution: "Zintegra" # o la institución
+
+  # Course info
+
+  Objectives:
+    O1: "**Comprender** la evolución de la IA y diferenciar sus etapas."
+    O2: "**Identificar** las funciones de la IA moderna y sus aplicaciones prácticas diarias."
+    O3: "**Analizar** críticamente cómo la IA es representada en la cultura (cine, literatura)."
+    O4: "**Evaluar** el impacto social, laboral, ético y ambiental de la IA."
+    O5: "**Participar** informadamente en debates y decisiones sobre el uso y la regulación de la IA."
