@@ -8,9 +8,9 @@ Al finalizar el curso, serás capaz de:
 <ol>
 {% for item in site.Objectives %}
       <li>
-        {{ item }}
+        {{ item.descripcion }}
       </li>
-    {% endfor %}
+{% endfor %}
 </ol>
 
 | Sesión                                                      | Título de la Sesión                                         | Cobertura de Objetivos                                                                      | Justificación de Cobertura                                                                                                                                                                                                                                                                      |
