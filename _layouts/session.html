@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{% assign block_meta = site.config.blocks_metadata[page.parent] %}
+{% assign session_meta = site.config.session_metadata[page.parent][page.name] %}
+
+<div class="session-container">
+  <!-- Right Sidebar TOC -->
+  <aside class="toc-sidebar">
+    {% include toc.html html=content %}
+    <div class="session-meta">
+      <h3>Metadatos</h3>
+      <p><strong>Duración:</strong> {{ session_meta.duration }} min</p>
+      <div class="objectives">
+        <h4>Objetivos</h4>
+        <ul>
+          {% for obj in session_meta.objectives %}
+            <li>{{ obj }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <article class="session-content">
+    <div class="breadcrumbs">
+      <a href="/">Inicio</a> > 
+      <a href="/{{ page.parent }}/">{{ block_meta.title }}</a> > 
+      {{ page.title }}
+    </div>
+
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+  </article>
+</div>
