@@ -3,6 +3,16 @@ layout: default
 title: Inicio
 ---
 
+<pre>{{ site.blocks | inspect }}</pre>
+<pre>{{ site.sessions | inspect }}</pre>
+
+{% for block in site.blocks %}
+  Block URL: {{ block.url }} <br>
+  {% for session in site.sessions %}
+    Session URL: {{ session.url }} <br>
+  {% endfor %}
+{% endfor %}
+
 # Descripción General del Curso "{{ site.title }}"
 
 Este curso está diseñado para proporcionar una comprensión accesible, crítica y culturalmente enriquecida de la Inteligencia Artificial (IA). A lo largo de 8 sesiones de una hora cada una (organizadas en 4 bloques temáticos de 2 horas), los participantes explorarán los fundamentos conceptuales de la IA y sus implicaciones sociales, éticas, laborales y culturales. 
