@@ -142,6 +142,28 @@ Este repositorio es para que encuentres fácilmente lo que necesitas. Aquí un m
 
 ---
 
+# Bloques del Curso
+
+{% for block in site.blocks %}
+<div class="block">
+  <h2>
+    <a href="{{ block.url }}">{{ block.title }}</a>
+  </h2>
+  <p>{{ block.description }}</p>
+  
+  <div class="sessions">
+    {% assign block_sessions = site.sessions | where_exp: "item", "item.path contains block.path" %}
+    {% for session in block_sessions %}
+      <a href="{{ session.url }}" class="session-link">
+        {{ session.title }}
+      </a>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+---
+
 # 🤝 Contribución y Retroalimentación
 
 Este repositorio está pensado para ti. Si tienes sugerencias, encuentras errores o enlaces rotos, por favor, ¡háznoslo saber! Aunque este es un repositorio de materiales para el curso, tu retroalimentación es invaluable para mantenerlo actualizado y útil.
