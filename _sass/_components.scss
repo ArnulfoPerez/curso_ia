@@ -117,3 +117,40 @@
     }
   }
 }
+
+// Session Layout
+.session-container {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.toc-sidebar {
+  position: sticky;
+  top: 1rem;
+  align-self: start;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+
+  .toc {
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    a {
+      display: block;
+      padding: 0.25rem 0;
+    }
+  }
+}
+
+.session-meta {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
