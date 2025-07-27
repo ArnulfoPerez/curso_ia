@@ -109,14 +109,16 @@ session_metadata:
       objectives: ["Integrar conocimientos transversales","Evaluar tensiones clave","Proponer acciones aplicables","Reflexionar sobre tendencias futuras"]
       description: "Esta sesión integra los ejes clave del curso, desde los fundamentos técnicos hasta los impactos socioculturales de la IA. Mediante un ejercicio interactivo, los participantes conectarán los aprendizajes de cada módulo, identificarán tensiones centrales (como eficiencia vs. equidad o innovación vs. regulación) y propondrán acciones concretas para su contexto profesional o comunitario. Se incluirá una reflexión guiada sobre tendencias futuras y un espacio para compromisos personales de aplicación del conocimiento."
 
-# Defaults
 defaults:
   - scope:
-      path: "_blocks/*/index.md"
+      path: ""
+      type: "blocks"
     values:
       layout: "block"
+      toc: true
   - scope:
-      path: "_blocks/*/_sessions/*.md"
+      path: ""
+      type: "sessions"
     values:
       layout: "session"
       toc: true
