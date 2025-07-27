@@ -1,0 +1,25 @@
+---
+layout: default
+---
+{% assign meta = site.config.blocks_metadata[page.path] %}
+
+<article class="block">
+  <div class="block-header">
+    <h1>{{ meta.title }}</h1>
+    <p class="description">{{ meta.description }}</p>
+    <div class="icon">{{ meta.icon }}</div>
+  </div>
+
+  {{ content }}
+
+  <h2>Sesiones</h2>
+  <div class="sessions-grid">
+    {% assign sessions = site.sessions | where: "parent", page.path | sort: "order" %}
+    {% for session in sessions %}
+      <a href="{{ session.url }}" class="session-card">
+        <h3>{{ session.title }}</h3>
+        <p>{{ site.config.session_metadata[page.path][session.name].objectives | first }}...</p>
+      </a>
+    {% endfor %}
+  </div>
+</article>
