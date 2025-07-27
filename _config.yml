@@ -1,5 +1,5 @@
 title: Introducción al impacto social de la Inteligencia Artificial
-description: Repositorio del curso Introducción a la IA
+description: Repositorio del curso Introducción al impacto social de la inteligencia artificial
 theme: jekyll-theme-minimal
 
 url: "https://ArnulfoPerez.github.io/curso_ia"
@@ -38,3 +38,85 @@ course:
     - "<strong>Analizar</strong> críticamente cómo la IA es representada en la cultura (cine, literatura)."
     - "<strong>Evaluar</strong> el impacto social, laboral, ético y ambiental de la IA."
     - "<strong>Participar</strong> informadamente en debates y decisiones sobre el uso y la regulación de la IA."
+  
+
+# Collections
+collections:
+  blocks:
+    output: true
+    permalink: /:path/
+  sessions:
+    output: true
+    permalink: /:path/:name/
+
+# Metadata
+blocks_metadata:
+  inteligencia:
+    title: "Inteligencia desde las perspectivas evolutiva, cognitiva, y computacional"
+    description: "La inteligencia se analiza desde tres ejes fundamentales: la perspectiva evolutiva (orígenes biológicos), la cognitiva (procesos mentales) y la computacional (modelos algorítmicos). Este estudio multidisciplinar integra hallazgos de la neurociencia, la lógica simbólica y su representación cultural. La Inteligencia Artificial (IA), surgida de la cibernética de Wiener y Rosenblueth en los años 1940, ha evolucionado entre avances técnicos y mitos populares, generando tensiones entre sus capacidades reales y las expectativas sociales. La inteligencia se comprende desde múltiples dimensiones: los cimientos biológicos de la neurociencia, los sistemas formales de la lógica computacional y sus representaciones culturales dinámicas. Este entendimiento multidisciplinario enmarca la evolución de la IA, que surge con la cibernética de Wiener y Rosenblueth en los años 1940, pasando por ciclos de entusiasmo y desencanto marcados por hitos como el Test de Turing, donde cada fase revela tensiones entre promesas tecnológicas y realidades. La genealogía del campo refleja este vaivén: desde los primeros enfoques simbólicos hasta las redes neuronales conexionistas y los modelos estadísticos actuales, todo mientras acumula crecientes implicaciones geopolíticas y militares."
+    date: ""
+    icon: "🧠"
+  infraestructura:
+    title: "La Inteligencia Artificial y su infraestructura"
+    description: " En esencia, la IA moderna 'aprende' mediante redes neuronales alimentadas por enormes volúmenes de datos que identifican patrones, pero permanecen limitadas por su material de entrenamiento, manifestando frecuentemente sesgos algorítmicos o comportamientos de 'caja negra'. Esta realidad operativa conlleva costos sustanciales: el impacto ambiental del entrenamiento de modelos, la concentración de poder tecnológico y preguntas fundamentales sobre qué significa realmente la inteligencia cuando se automatiza a gran escala. Análisis de los pilares materiales que sostienen la IA: desde centros de datos que consumen una parte cada vez más importante de la energía global hasta la explotación de recursos minerales. Exploramos cómo la infraestructura tecnológica (hardware, datos y energía) determina las capacidades reales de los sistemas de IA, sus impactos ambientales y las dinámicas de poder detrás de su desarrollo.""
+    date: ""
+    icon: "🌐"
+  impacto:
+    title: "El impacto socioeconómico de la Inteligencia Artificial"
+    description: "La IA contemporánea plantea paradojas sistémicas: mientras sus modelos fundacionales exigen infraestructuras tecnológicas con alto costo ambiental —centros de datos que consumen el 1% de la energía global—, su gobernanza sigue concentrada en oligopolios corporativos que externalizan impactos. Esta asimetría reproduce dinámicas de ganadores y perdedores: las plataformas monetizan datos y automatizan empleos (precarizando sectores enteros), mientras legisladores lidian con marcos éticos reactivos para sesgos algorítmicos o vigilancia opaca. Frente a esto, emergen tres preguntas radicales: ¿quién gana (élites tecnológicas y mercados financieros)?, ¿quién paga (trabajadores desplazados, comunidades afectadas por minería de litio y e-waste)?, y ¿quién decide (Estados capturados por lobby o ciudadanías sin acceso al diseño algorítmico)? La resiliencia exigirá no solo regulaciones audaces —como impuestos a la huella de carbono digital—, sino redefinir qué entendemos por progreso tecnológico en sociedades desiguales."
+    date: ""
+    icono: "⚖️"
+  percepcion:
+    title: "La percepción sociocultural de la Inteligencia Artificial (IA) y sus tendencias futuras"
+    description: "El análisis de películas, literatura y marketing tecnológico revela cómo los imaginarios distópicos o utópicos sobre IA moldean su percepción pública, fomentando desde la adopción acrítica hasta el rechazo visceral. Frente a esto, se vuelve urgente diseñar futuros participativos: cuestionar qué IA queremos construir (¿herramientas para la equidad o sistemas de control?), priorizar decisiones éticas hoy (transparencia, regulación anticolonialista) y crear espacios de proyección crítica donde la ciudadanía —no solo las élites tecnológicas— defina los límites entre innovación y derechos humanos."
+    date: ""
+    icono: "🎭"
+session_metadata:
+  inteligencia:
+    intro:
+      title: "Introducción" 
+      objectives: ["Definir inteligencia", "Historia evolutiva"]
+      description: "Exploración del concepto de inteligencia desde la neurociencia, la lógica computacional y la representación cultural. Introducción a la IA desde la cibernética de Wiener y Rosenblueth, hasta los mitos modernos."
+    fundamentos:
+      title: " Fundamentos conceptuales e historia de la inteligencia artificial (IA)"
+      objectives: ["Tipos de redes neuronales", "Backpropagation"]
+      description: "Esta sesión explorará los pilares fundamentales de la inteligencia artificial (IA), examinando: 1) sus bases conceptuales —desde definiciones de inteligencia hasta los mecanismos de simulación computacional—, 2) la evolución técnica a través de paradigmas clave (enfoques simbólicos, conexionistas y estadísticos), y 3) hitos históricos como la cibernética de Wiener, el Test de Turing y el surgimiento del machine learning moderno. El análisis se centrará en los aspectos sistémicos de la IA, incluyendo arquitecturas algorítmicas y criterios para seleccionar enfoques según problemáticas específicas. El objetivo es proporcionar una comprensión técnica rigurosa de sus capacidades y limitaciones operativas."
+  infraestructura:
+    modelos:
+       title: "Modelos, datos y entrenamiento"
+       objectives: ["Diferenciar los principales enfoques de modelos de IA", "Comprender el proceso de entrenamiento de modelos"]
+       description: "Esta sesión abordará los fundamentos sistémicos de la inteligencia artificial, centrándose en: el deep learning (redes neuronales inspiradas en la biología cerebral, aplicadas en visión computacional y lenguaje), el procesamiento simbólico (lógica formal y representaciones estructuradas), y la evolución desde modelos clásicos de machine learning hasta LLMs (diferencias en escalabilidad y generalización). Se analizarán ventajas, limitaciones y casos prácticos."
+    infraestructura:
+      title: "Infraestructura de IA"
+      objectives: ["Identificar los componentes clave de la infraestructura de IA", "Evaluar el impacto ambiental de la IA"]
+      description: "El desarrollo de la IA depende de una infraestructura masiva con costos ocultos: alto consumo energético (centros de datos que representan ~1% de la electricidad global), dependencia de datos a escala industrial y concentración en pocas corporaciones que controlan modelos fundacionales. Esta dinámica plantea tres interrogantes críticos: ¿quién gana? (empresas tecnológicas y mercados financieros), ¿quién paga? (comunidades afectadas por extracción de recursos y trabajadores en la cadena de suministro) y ¿quién decide? (élites técnicas con mínima supervisión pública). El impacto ambiental —desde emisiones de CO₂ hasta desechos electrónicos— evidencia la urgencia de regular no solo los algoritmos, sino su soporte material."
+  impacto:
+    individual:
+      title: "Impacto individual de la IA, oportunidades y riesgos "
+      objectives: ["Reconocer los efectos de la IA en la vida diaria", "Evaluar riesgos clave en interacciones digitales"]
+      description: "Esta sesión explorará cómo la inteligencia artificial está transformando la vida cotidiana de las personas, desde el ámbito laboral hasta las interacciones digitales. Analizaremos los riesgos de los sesgos algorítmicos en decisiones que afectan a individuos (como contrataciones o acceso a créditos), las implicaciones de privacidad al usar herramientas de IA, y estrategias prácticas para interactuar críticamente con estas tecnologías. Los participantes aprenderán a detectar alucinaciones en modelos generativos, proteger sus datos personales y desarrollar habilidades resilientes para adaptarse a un mercado laboral en automatización. La sesión incluirá ejemplos concretos y herramientas para empoderar a los individuos en la era de la IA."
+    institucional: 
+      title: "6. IA en las organizaciones: Estrategias empresariales"
+      objectives: ["Identificar los componentes clave para una implementación responsable de IA", "Diseñar políticas de gobernanza para IA"]
+      description: "Esta sesión está diseñada para profesionales y tomadores de decisiones que buscan implementar soluciones de IA en sus organizaciones de manera responsable. Cubriremos los desafíos técnicos y éticos de integrar IA, incluyendo la selección de proveedores de nube confiables, la gestión de riesgos de seguridad al usar servicios de terceros, y el cumplimiento normativo en privacidad de datos. Discutiremos cómo balancear la eficiencia operativa con consideraciones éticas, abordando temas como la propiedad intelectual de contenidos generados por IA, el impacto en la fuerza laboral y el desarrollo de políticas internas para una gobernanza efectiva."
+  percepcion:
+    sociocultural:
+      title: "La percepción sociocultural de la IA"
+      objectives: ["Deconstruir narrativas dominantes sobre IA", "Evaluar el impacto sociocultural de estas representaciones"]
+      description: "La representación de la IA en películas, literatura y marketing tecnológico ha construido imaginarios polarizados —entre utopías de progreso y distopías de control— que moldean su adopción acrítica por parte del público. Frente a estas narrativas dominantes, surge la necesidad de diseñar futuros participativos: cuestionar qué tipo de IA queremos desarrollar (¿herramientas para la equidad o sistemas de vigilancia?), priorizar decisiones éticas actuales (transparencia, regulación inclusiva) y crear espacios de co-creación ciudadana que redefinan el rumbo tecnológico más allá de los intereses corporativos."
+    cierre:
+      title: "El impacto socioecdonomico de la IA"
+      objectives: ["Integrar conocimientos transversales","Evaluar tensiones clave","Proponer acciones aplicables","Reflexionar sobre tendencias futuras"]
+      description: "Esta sesión integra los ejes clave del curso, desde los fundamentos técnicos hasta los impactos socioculturales de la IA. Mediante un ejercicio interactivo, los participantes conectarán los aprendizajes de cada módulo, identificarán tensiones centrales (como eficiencia vs. equidad o innovación vs. regulación) y propondrán acciones concretas para su contexto profesional o comunitario. Se incluirá una reflexión guiada sobre tendencias futuras y un espacio para compromisos personales de aplicación del conocimiento."
+
+# Defaults
+defaults:
+  - scope:
+      path: "_blocks/*/index.md"
+    values:
+      layout: "block"
+  - scope:
+      path: "_blocks/*/_sessions/*.md"
+    values:
+      layout: "session"
+      toc: true
