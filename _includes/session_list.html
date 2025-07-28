@@ -1,0 +1,18 @@
+{% comment %}
+    Este include lista las sesiones de un bloque específico.
+    Se usa en _layouts/block.html.
+    Requiere que `page.slug` esté disponible (el slug del bloque actual).
+{% endcomment %}
+<h2>Sesiones en este Bloque</h2>
+<nav class="block-sessions-toc">
+    <ol>
+    {% assign sessions_in_block = site.sessions | where: "block_slug", page.slug | sort: "session_order" %}
+    {% if sessions_in_block.size > 0 %}
+        {% for session in sessions_in_block %}
+            <li><a href="{{ site.baseurl }}{{ session.url }}">{{ session.session_order }}. {{ session.title }}</a></li>
+        {% endfor %}
+    {% else %}
+        <li>No hay sesiones definidas para este bloque aún.</li>
+    {% endif %}
+    </ol>
+</nav>
