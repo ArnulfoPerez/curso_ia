@@ -1,36 +1,64 @@
 ---
 layout: default
 ---
-{% assign block_meta = site.config.blocks_metadata[page.parent] %}
-{% assign session_meta = site.config.session_metadata[page.parent][page.name] %}
+{% comment %} 
+  Extract block ID from path (e.g., "01-inteligencia" from "_blocks/01-inteligencia/_sessions/01-intro/index.md")
+{% endcomment %}
+{% assign path_parts = page.path | split: "/" %}
+{% assign block_id = path_parts[1] %}
+{% assign session_id = path_parts[3] %}
+
+{% comment %} 
+  Safely access metadata with fallbacks 
+{% endcomment %}
+{% assign block_meta = site.blocks_metadata[block_id] | default: nil %}
+{% assign session_meta = site.session_metadata[block_id][session_id] | default: nil %}
 
 <div class="session-container">
   <!-- Right Sidebar TOC -->
   <aside class="toc-sidebar">
-    {% include toc.html html=content %}
+    {% if page.toc != false %}
+      {% include toc.html html=content %}
+    {% endif %}
+    
+    {% if session_meta %}
     <div class="session-meta">
       <h3>Metadatos</h3>
+      
+      {% if session_meta.duration %}
       <p><strong>Duración:</strong> {{ session_meta.duration }} min</p>
+      {% endif %}
+      
+      {% if session_meta.objectives %}
       <div class="objectives">
         <h4>Objetivos</h4>
         <ul>
           {% for obj in session_meta.objectives %}
-            <li>{{ obj }}</li>
+            <li>{{ obj | markdownify | remove: "<p>" | remove: "</p>" }}</li>
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
     </div>
+    {% endif %}
   </aside>
 
   <!-- Main Content -->
   <article class="session-content">
     <div class="breadcrumbs">
-      <a href="/">Inicio</a> > 
-      <a href="/{{ page.parent }}/">{{ block_meta.title }}</a> > 
+      <a href="{{ '/' | relative_url }}">Inicio</a> › 
+      {% if block_meta %}
+        <a href="{{ block_id | prepend: '/' | relative_url }}">{{ block_meta.title }}</a> › 
+      {% endif %}
       {{ page.title }}
     </div>
 
     <h1>{{ page.title }}</h1>
+    
+    {% if session_meta and session_meta.description %}
+    <p class="session-description">{{ session_meta.description }}</p>
+    {% endif %}
+    
     {{ content }}
   </article>
 </div>
