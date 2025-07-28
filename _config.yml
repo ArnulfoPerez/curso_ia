@@ -1,9 +1,10 @@
 title: Introducción al impacto social de la Inteligencia Artificial
 description: Repositorio del curso Introducción al impacto social de la inteligencia artificial
-theme: jekyll-theme-minimal
+theme: jekyll-theme-minimal # Nota: Este tema podría sobreescribir tus estilos. Si quieres control total, considera un tema más básico o ninguno.
 
-url: "https://ArnulfoPerez.github.io/curso_ia"
-baseurl: /curso_ia 
+url: "https://ArnulfoPerez.github.io" # Deja solo el dominio base para Jekyll
+baseurl: /curso_ia # Importante: esta es la ruta raíz de tu sitio en GitHub Pages
+
 markdown: kramdown
 highlighter: rouge
 kramdown:
@@ -17,9 +18,9 @@ navigation:
   - title: "Inicio"
     url: "/"
   - title: "Instructor"
-    url: "/instructor"
+    url: "/instructor" # Ajusta si esta es una página estática o de colección
   - title: "Temario"
-    url: "/temario"
+    url: "/temario" # Ajusta si esta es una página estática o de colección
 
 # Instructor info
 instructor:
@@ -37,16 +38,16 @@ course:
     - "Evaluar el impacto social, laboral, ético y ambiental de la IA."
     - "Participar informadamente en debates y decisiones sobre el uso y la regulación de la IA."
 
-# Collections
+# Collections (MODIFICADO)
 collections:
   blocks:
     output: true
-    permalink: /:path/
+    permalink: /:slug/ # Usará el 'slug' del front matter del bloque para la URL (ej. /inteligencia/)
   sessions:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:block_slug/:slug/ # Usará 'block_slug' y 'slug' del front matter de la sesión (ej. /inteligencia/intro/)
 
-# Metadata
+# Metadata (MANTENER)
 blocks_metadata:
   inteligencia:
     title: "Inteligencia desde las perspectivas evolutiva, cognitiva, y computacional"
@@ -68,51 +69,52 @@ blocks_metadata:
 session_metadata:
   inteligencia:
     intro:
-      title: "Introducción" 
-      objectives: ["Definir inteligencia", "Historia evolutiva"]
+      title: "Introducción"
+      obj: ["Definir inteligencia", "Historia evolutiva"]
       description: "Exploración del concepto de inteligencia desde la neurociencia..."
     fundamentos:
       title: "Fundamentos conceptuales e historia de la inteligencia artificial (IA)"
-      objectives: ["Tipos de redes neuronales", "Backpropagation"]
+      obj: ["Tipos de redes neuronales", "Backpropagation"]
       description: "Esta sesión explorará los pilares fundamentales de la inteligencia artificial..."
   infraestructura:
     modelos:
       title: "Modelos, datos y entrenamiento"
-      objectives: ["Diferenciar los principales enfoques de modelos de IA", "Comprender el proceso de entrenamiento de modelos"]
+      obj: ["Diferenciar los principales enfoques de modelos de IA", "Comprender el proceso de entrenamiento de modelos"]
       description: "Esta sesión abordará los fundamentos sistémicos de la inteligencia artificial..."
     infraestructura:
       title: "Infraestructura de IA"
-      objectives: ["Identificar los componentes clave de la infraestructura de IA", "Evaluar el impacto ambiental de la IA"]
+      obj: ["Identificar los componentes clave de la infraestructura de IA", "Evaluar el impacto ambiental de la IA"]
       description: "El desarrollo de la IA depende de una infraestructura masiva con costos ocultos..."
   impacto:
     individual:
       title: "Impacto individual de la IA, oportunidades y riesgos"
-      objectives: ["Reconocer los efectos de la IA en la vida diaria", "Evaluar riesgos clave en interacciones digitales"]
+      obj: ["Reconocer los efectos de la IA en la vida diaria", "Evaluar riesgos clave en interacciones digitales"]
       description: "Esta sesión explorará cómo la inteligencia artificial está transformando la vida cotidiana..."
-    institucional: 
+    institucional:
       title: "IA en las organizaciones: Estrategias empresariales"
-      objectives: ["Identificar los componentes clave para una implementación responsable de IA", "Diseñar políticas de gobernanza para IA"]
+      obj: ["Identificar los componentes clave para una implementación responsable de IA", "Diseñar políticas de gobernanza para IA"]
       description: "Esta sesión está diseñada para profesionales y tomadores de decisiones..."
   percepcion:
     sociocultural:
       title: "La percepción sociocultural de la IA"
-      objectives: ["Deconstruir narrativas dominantes sobre IA", "Evaluar el impacto sociocultural de estas representaciones"]
+      obj: ["Deconstruir narrativas dominantes sobre IA", "Evaluar el impacto sociocultural de estas representaciones"]
       description: "La representación de la IA en películas, literatura y marketing tecnológico..."
     cierre:
       title: "El impacto socioeconómico de la IA"
-      objectives: ["Integrar conocimientos transversales", "Evaluar tensiones clave", "Proponer acciones aplicables", "Reflexionar sobre tendencias futuras"]
+      obj: ["Integrar conocimientos transversales", "Evaluar tensiones clave", "Proponer acciones aplicables", "Reflexionar sobre tendencias futuras"]
       description: "Esta sesión integra los ejes clave del curso, desde los fundamentos técnicos..."
 
+# Defaults (MODIFICADO)
 defaults:
   - scope:
-      path: "_blocks"  # Target files in _blocks directory
-      type: "blocks"   # Target the blocks collection
+      path: "_blocks"
+      type: "blocks"
     values:
       layout: "block"
       toc: true
   - scope:
-      path: "_blocks/*/_sessions"  # Target session files in nested _sessions directories
-      type: "sessions"            # Target the sessions collection
+      path: "_sessions" # CORRECTO: Todas las sesiones deben estar en el directorio raíz _sessions
+      type: "sessions"
     values:
       layout: "session"
       toc: true
