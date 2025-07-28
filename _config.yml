@@ -44,7 +44,7 @@ collections:
     permalink: /:path/
   sessions:
     output: true
-    permalink: /:path/:name/
+    permalink: /:collection/:path/
 
 # Metadata
 blocks_metadata:
