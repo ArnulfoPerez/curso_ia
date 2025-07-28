@@ -1,4 +1,6 @@
 ---
+layout: block
+title: Inteligencia
 path: inteligencia
 ---
 
