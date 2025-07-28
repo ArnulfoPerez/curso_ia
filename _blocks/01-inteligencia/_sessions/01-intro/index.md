@@ -1,5 +1,6 @@
 ---
-title: "Introducción a la IA"
+layout: session
+title: Introducción
 parent: inteligencia
 order: 1
 ---
