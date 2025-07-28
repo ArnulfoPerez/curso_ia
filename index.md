@@ -1,17 +1,27 @@
 ---
 layout: default
-title: Inicio
+title: Temario del Curso
 ---
 
-<pre>{{ site.blocks | inspect }}</pre>
-<pre>{{ site.sessions | inspect }}</pre>
+# Curso: {{ site.title }}
 
-{% for block in site.blocks %}
-  Block URL: {{ block.url }} <br>
-  {% for session in site.sessions %}
-    Session URL: {{ session.url }} <br>
-  {% endfor %}
+<p>{{ site.description }}</p>
+
+## Objetivos Generales del Curso:
+<ul>
+{% for objective in site.course.objectives %}
+    <li>{{ objective }}</li>
 {% endfor %}
+</ul>
+
+## Bloques Temáticos
+
+{% include block_toc.html %} {# Incluye el TOC principal de bloques y sesiones #}
+
+## Instructor
+### {{ site.instructor.name }}
+{{ site.instructor.position }} en {{ site.instructor.institution }}
+[Contacto]({{ site.instructor.email | prepend: "mailto:" }}) | [LinkedIn]({{ site.instructor.linkedin }})
 
 # Descripción General del Curso "{{ site.title }}"
 
@@ -150,27 +160,6 @@ Este repositorio es para que encuentres fácilmente lo que necesitas. Aquí un m
 3.  **Profundiza:** La carpeta [`Recursos_Adicionales/`](./Recursos/) te ofrece glosarios y lecturas recomendadas para seguir explorando.
 4.  **Descarga:** Puedes descargar cualquier archivo haciendo clic en él y luego en el botón "Download" (descargar).
 
----
-
-# Bloques del Curso
-
-{% for block in site.blocks %}
-  {% assign block_dir = block.path | split: "/" | first %}
-  <div class="block">
-    <h2>
-      <a href="{{ site.baseurl }}{{ block.url }}">{{ block.title }}</a>
-    </h2>
-    
-    <div class="sessions">
-      {% assign block_sessions = site.sessions | where_exp: "item", "item.path contains block_dir" %}
-      {% for session in block_sessions %}
-        <a href="{{ site.baseurl }}{{ session.url }}" class="session-link">
-          {{ session.title }}
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-{% endfor %}
 ---
 
 # 🤝 Contribución y Retroalimentación
