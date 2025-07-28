@@ -1,0 +1,23 @@
+{% comment %}
+    Este include muestra los enlaces a los recursos de una sesión.
+    Se usa en _layouts/session.html.
+    Requiere `page.block_slug`, `page.slug`, `page.has_notes`, `page.has_activity`, `page.has_presentation`, y `site.baseurl`.
+{% endcomment %}
+<section class="session-resources">
+    <h2>Recursos de la Sesión</h2>
+    <ul>
+        {% assign resource_base_path = site.baseurl | append: "/assets/curso/" | append: page.block_slug | append: "/" | append: page.slug | append: "/" %}
+
+        {% if page.has_notes %}
+            <li><a href="{{ resource_base_path }}notas.md">Notas de la Sesión</a></li>
+        {% endif %}
+
+        {% if page.has_activity %}
+            <li><a href="{{ resource_base_path }}actividad.md">Actividad de la Sesión</a></li>
+        {% endif %}
+
+        {% if page.has_presentation %}
+            <li><a href="{{ resource_base_path }}presentacion.pptx">Presentación de la Sesión (PPTX)</a></li>
+        {% endif %}
+    </ul>
+</section>
