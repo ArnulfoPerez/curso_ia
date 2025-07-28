@@ -155,46 +155,6 @@ Este repositorio es para que encuentres fácilmente lo que necesitas. Aquí un m
 # Bloques del Curso
 
 {% for block in site.blocks %}
-<div class="block">
-  <h2>
-    <a href="{{ block.url }}">{{ block.title }}</a>
-  </h2>
-  <p>{{ block.description }}</p>
-  
-  <div class="sessions">
-    {% assign block_sessions = site.sessions | where_exp: "item", "item.path contains block.path" %}
-    {% for session in block_sessions %}
-      <a href="{{ session.url }}" class="session-link">
-        {{ session.title }}
-      </a>
-    {% endfor %}
-  </div>
-</div>
-{% endfor %}
-
-<div class="blocks-container">
-  {% for block in site.blocks %}
-  <div class="block">
-    <div class="block__header">
-      <h2>
-        <a href="{{ block.url }}">{{ block.title }}</a>
-      </h2>
-    </div>
-    <p class="block__description">{{ block.description }}</p>
-    
-    <div class="block__sessions">
-      {% assign block_sessions = site.sessions | where_exp: "item", "item.path contains block.path" %}
-      {% for session in block_sessions %}
-        <a href="{{ session.url }}" class="session-link">
-          {{ session.title }}
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-  {% endfor %}
-</div>
-
-{% for block in site.blocks %}
   {% assign block_dir = block.path | split: "/" | first %}
   <div class="block">
     <h2>
