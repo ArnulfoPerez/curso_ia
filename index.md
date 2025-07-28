@@ -18,6 +18,7 @@ title: Temario del Curso
 
 {% include block_toc.html %} {# Incluye el TOC principal de bloques y sesiones #}
 
+
 ## Instructor
 ### {{ site.instructor.name }}
 {{ site.instructor.position }} en {{ site.instructor.institution }}
