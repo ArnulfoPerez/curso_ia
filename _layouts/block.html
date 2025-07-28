@@ -1,24 +1,41 @@
 ---
 layout: default
 ---
-{% assign meta = site.config.blocks_metadata[page.path] %}
+{% comment %} Get the block ID from the path (e.g., "01-inteligencia" from "_blocks/01-inteligencia/index.md") {% endcomment %}
+{% assign block_id = page.path | split: "/" | last | remove: "/index.md" %}
 
 <article class="block">
   <div class="block-header">
-    <h1>{{ meta.title }}</h1>
-    <p class="description">{{ meta.description }}</p>
-    <div class="icon">{{ meta.icon }}</div>
+    <h1>{{ site.blocks_metadata[block_id].title | default: page.title }}</h1>
+    <p class="description">{{ site.blocks_metadata[block_id].description }}</p>
+    <div class="icon">{{ site.blocks_metadata[block_id].icon }}</div>
   </div>
 
   {{ content }}
 
   <h2>Sesiones</h2>
   <div class="sessions-grid">
-    {% assign sessions = site.sessions | where: "parent", page.path | sort: "order" %}
+    {% comment %} 
+      Find sessions for this block by matching paths:
+      - Compare against session paths containing the block ID
+      - Alternative: Use front matter "block: 01-inteligencia" in sessions
+    {% endcomment %}
+    {% assign sessions = site.sessions | where_exp: "item", "item.path contains block_id" | sort: "order" %}
+    
     {% for session in sessions %}
-      <a href="{{ session.url }}" class="session-card">
+      {% comment %} Get session name from path (e.g., "01-intro" from "_blocks/01-inteligencia/_sessions/01-intro/index.md") {% endcomment %}
+      {% assign session_name = session.path | split: "/" | last-1 %}
+      
+      <a href="{{ session.url | relative_url }}" class="session-card">
         <h3>{{ session.title }}</h3>
-        <p>{{ site.config.session_metadata[page.path][session.name].objectives | first }}...</p>
+        <p>
+          {% comment %} Access session metadata safely {% endcomment %}
+          {% if site.session_metadata[block_id][session_name] %}
+            {{ site.session_metadata[block_id][session_name].objectives | first | default: session.description | truncate: 100 }}
+          {% else %}
+            {{ session.description | truncate: 100 }}
+          {% endif %}
+        </p>
       </a>
     {% endfor %}
   </div>
