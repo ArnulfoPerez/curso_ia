@@ -1,0 +1,8 @@
+<nav>
+    <ul>
+        {% for item in site.navigation %}
+            <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+        <li><a href="{{ site.baseurl }}/">Temario (Bloques)</a></li> {# Enlace directo a tu lista de bloques #}
+    </ul>
+</nav>
