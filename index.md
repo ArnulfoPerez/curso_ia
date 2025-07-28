@@ -194,6 +194,23 @@ Este repositorio es para que encuentres fácilmente lo que necesitas. Aquí un m
   {% endfor %}
 </div>
 
+{% for block in site.blocks %}
+  {% assign block_dir = block.path | split: "/" | first %}
+  <div class="block">
+    <h2>
+      <a href="{{ site.baseurl }}{{ block.url }}">{{ block.title }}</a>
+    </h2>
+    
+    <div class="sessions">
+      {% assign block_sessions = site.sessions | where_exp: "item", "item.path contains block_dir" %}
+      {% for session in block_sessions %}
+        <a href="{{ site.baseurl }}{{ session.url }}" class="session-link">
+          {{ session.title }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
 ---
 
 # 🤝 Contribución y Retroalimentación
