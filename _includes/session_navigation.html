@@ -1,0 +1,22 @@
+{% comment %}
+    Este include genera la navegación entre sesiones hermanas de un mismo bloque.
+    Se usa en _layouts/session.html.
+    Requiere `page.block_slug`, `page.url`, `site.baseurl`.
+{% endcomment %}
+{% assign parent_block = site.blocks | where: "slug", page.block_slug | first %}
+{% if parent_block %}
+    <nav class="session-navigation">
+        <h3>Más Sesiones en el Bloque "{{ parent_block.title }}":</h3>
+        <ol>
+        {% assign sessions_in_block = site.sessions | where: "block_slug", page.block_slug | sort: "session_order" %}
+        {% for session in sessions_in_block %}
+            <li>
+                <a href="{{ site.baseurl }}{{ session.url }}"
+                   {% if session.url == page.url %}class="current-session"{% endif %}>
+                    {{ session.session_order }}. {{ session.title }}
+                </a>
+            </li>
+        {% endfor %}
+        </ol>
+    </nav>
+{% endif %}
