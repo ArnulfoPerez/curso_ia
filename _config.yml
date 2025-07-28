@@ -105,14 +105,14 @@ session_metadata:
 
 defaults:
   - scope:
-      path: ""
-      type: "blocks"
+      path: "_blocks"  # Target files in _blocks directory
+      type: "blocks"   # Target the blocks collection
     values:
       layout: "block"
       toc: true
   - scope:
-      path: ""
-      type: "sessions"
+      path: "_blocks/*/_sessions"  # Target session files in nested _sessions directories
+      type: "sessions"            # Target the sessions collection
     values:
       layout: "session"
       toc: true
