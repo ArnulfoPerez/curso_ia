@@ -1,0 +1,27 @@
+{% comment %}
+    Este include genera el TOC de bloques con sus sesiones.
+    Se usa en index.md.
+{% endcomment %}
+<nav class="course-toc">
+    <ol>
+    {% assign ordered_blocks = site.blocks | sort: "order" %}
+    {% for block in ordered_blocks %}
+        <li>
+            <h2><a href="{{ site.baseurl }}{{ block.url }}">{{ block.order }}. {{ block.title }} {{ site.blocks_metadata[block.slug].icon }}</a></h2>
+            <p>{{ site.blocks_metadata[block.slug].description }}</p>
+
+            <h3>Sesiones:</h3>
+            <ol>
+            {% assign sessions_in_block = site.sessions | where: "block_slug", block.slug | sort: "session_order" %}
+            {% if sessions_in_block.size > 0 %}
+                {% for session in sessions_in_block %}
+                    <li><a href="{{ site.baseurl }}{{ session.url }}">{{ session.session_order }}. {{ session.title }}</a></li>
+                {% endfor %}
+            {% else %}
+                <li>No hay sesiones definidas para este bloque aún.</li>
+            {% endif %}
+            </ol>
+        </li>
+    {% endfor %}
+    </ol>
+</nav>
